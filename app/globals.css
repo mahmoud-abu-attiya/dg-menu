@@ -2,20 +2,109 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-@media (prefers-color-scheme: dark) {
+
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+
+    --background: 0 0 100%; /* white */
+
+    --foreground: 0 100% 10%; /* Dark orange foreground */
+
+    --card: 0 0 100%; /* white */
+
+    --card-foreground: 33 100% 10%; /* Dark orange card foreground */
+
+    --popover: 0 0% 97%; /* gray */
+
+    --popover-foreground: 0 100% 10%; /* Dark orange popover foreground */
+
+    --primary: 0 100% 41%; /* red primary */
+
+    --primary-foreground: 33 100% 100%; /* Light orange primary foreground */
+
+    --secondary: 0 100% 90%; /* Soft orange secondary */
+
+    --secondary-foreground: 33 100% 30%; /* Medium orange secondary foreground */
+
+    --muted: 0 0% 98%; /* Muted orange */
+
+    --muted-foreground: 0deg 0% 52.12%; /* Muted orange foreground */
+
+    --accent: 0 100% 90%; /* Accent orange */
+
+    --accent-foreground: 33 100% 30%; /* Accent orange foreground */
+
+    --destructive: 0 84.2% 60.2%; /* Keeping destructive red */
+
+    --destructive-foreground: 0 0% 98%; /* Keeping destructive foreground */
+
+    --border: 0 0% 85%;
+
+    --input: 0 100% 85%; /* Light orange input */
+
+    --ring: 0 100% 10%; /* Dark orange ring */
+
+    --chart-1: 0 100% 50%; /* Vibrant orange chart 1 */
+
+    --chart-2: 0 100% 40%; /* Medium orange chart 2 */
+
+    --chart-3: 0 100% 30%; /* Darker orange chart 3 */
+
+    --chart-4: 0 100% 60%; /* Bright orange chart 4 */
+
+    --chart-5: 0 100% 70%; /* Softer orange chart 5 */
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+    
+      /* Sidebar Variables */
+  --color-sidebar-background: #ffffff;
+  --color-sidebar-foreground: #1e1e1e;
+  --color-sidebar-primary: #2dbd6e;
+  --color-sidebar-primary-foreground: #ffe6e6;
+  --color-sidebar-accent: #f3f3f3;
+  --color-sidebar-accent-foreground: #1a1a1a;
+  --color-sidebar-border: #e6e6e6;
+  --color-sidebar-ring: #2dbd6e;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  h1, h2, h3, h4, h5, h6, .gradient-text {
+    @apply bg-gradient-to-tl from-red-950 via-red-800 to-red-600 bg-clip-text text-transparent;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  [dir="rtl"] .rtl-rotate-180 {
+    transform: rotate(180deg);
+  }
+  button,
+  a {
+    cursor: pointer;
+  }
+  .bg-mesh{
+    background: radial-gradient(at 93.69612068965517% 73.125%, #a30000 0px, transparent 50%), radial-gradient(at 86.47629310344827% 15.625%, #940000 0px, transparent 50%), radial-gradient(at 32.165948275862064% 28.749999999999996%, #e23232 0px, transparent 50%), radial-gradient(at 37.015086206896555% 91.45833333333333%, #640000 0px, transparent 50%), #EC2049;
+  }
 }
