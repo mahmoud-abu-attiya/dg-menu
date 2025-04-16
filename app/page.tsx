@@ -79,7 +79,7 @@ export default function Home() {
               <div className="flex items-center justify-center">
                 <div className="relative h-[450px] w-full overflow-hidden rounded-xl md:h-[500px]">
                   <Image
-                    src="/home.png"
+                    src="/placeholder.svg"
                     alt="Digital Menu Preview"
                     className="object-cover"
                     fill
