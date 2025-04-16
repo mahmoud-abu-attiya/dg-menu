@@ -408,65 +408,65 @@ export default function Home() {
               </p>
             </div>
             <div className="grid gap-4 grid-cols-2 lg:col-span-3">
-              <Card className="bg-mesh text-white border-primary p-4 md:p-6 shadow-md">
-                <div className=" flex flex-row items-center gap-4">
-                  <div className="rounded-full bg-muted/20 p-3">
+              <Card className="bg-mesh text-white border-primary p-2 sm:p-4 md:p-6 shadow-md">
+                <div className=" flex flex-row items-center gap-2 md:gap-4">
+                  <div className="rounded-full bg-muted/20 p-1.5 md:p-3 text-sm md:text-lg">
                     <MessageSquareText />
                   </div>
                   <div className="flex flex-col">
-                    <h6 className="uppercase text-xl text-white font-bold">{t("contacts.whatsappTitle")}</h6>
-                    <Link href={t("contacts.whatsappUrl")} className="underline">+123 456 789</Link>
+                    <h6 className="uppercase md:text-xl text-white font-bold">{t("contacts.whatsappTitle")}</h6>
+                    <Link href={t("contacts.whatsappUrl")} className="underline text-sm md:text-base">+123 456 789</Link>
                   </div>
                 </div>
-                <Button className="text-primary bg-white hover:bg-secondary w-full mt-6">{t("home.contactBtn")}</Button>
+                <Button className="text-primary bg-white hover:bg-secondary w-full mt-4 md:mt-6">{t("home.contactBtn")}</Button>
               </Card>
-              <Card className="bg-mesh text-white border-primary p-4 md:p-6 shadow-md">
-                <div className=" flex flex-row items-center gap-4">
-                  <div className="rounded-full bg-muted/20 p-3">
+              <Card className="bg-mesh text-white border-primary p-2 sm:p-4 md:p-6 shadow-md">
+                <div className=" flex flex-row items-center gap-2 md:gap-4">
+                  <div className="rounded-full bg-muted/20 p-1.5 md:p-3 text-sm md:text-lg">
                     <Instagram />
                   </div>
                   <div className="flex flex-col">
-                    <h6 className="uppercase text-xl text-white font-bold">{t("contacts.instagramTitle")}</h6>
-                    <Link href={t("contacts.instagramUrl")} className="underline">@menu_master_dg</Link>
+                    <h6 className="uppercase md:text-xl text-white font-bold">{t("contacts.instagramTitle")}</h6>
+                    <Link href={t("contacts.instagramUrl")} className="underline text-sm md:text-base">@menu_master_dg</Link>
                   </div>
                 </div>
-                <Button className="text-primary bg-white hover:bg-secondary w-full mt-6">{t("home.contactBtn")}</Button>
+                <Button className="text-primary bg-white hover:bg-secondary w-full mt-4 md:mt-6">{t("home.contactBtn")}</Button>
               </Card>
-              <Card className="bg-mesh text-white border-primary p-4 md:p-6 shadow-md">
-                <div className=" flex flex-row items-center gap-4">
-                  <div className="rounded-full bg-muted/20 p-3">
+              <Card className="bg-mesh text-white border-primary p-2 sm:p-4 md:p-6 shadow-md">
+                <div className=" flex flex-row items-center gap-2 md:gap-4">
+                  <div className="rounded-full bg-muted/20 p-1.5 md:p-3 text-sm md:text-lg">
                     <MapPin />
                   </div>
                   <div className="flex flex-col">
-                    <h6 className="uppercase text-xl text-white font-bold">{t("contacts.locationTitle")}</h6>
-                    <Link href={t("contacts.locationUrl")} className="underline">Desoq, kafr El-sheakh</Link>
+                    <h6 className="uppercase md:text-xl text-white font-bold">{t("contacts.locationTitle")}</h6>
+                    <Link href={t("contacts.locationUrl")} className="underline text-sm md:text-base">Desoq, kafr El-sheakh</Link>
                   </div>
                 </div>
-                <Button className="text-primary bg-white hover:bg-secondary w-full mt-6">{t("home.contactBtn")}</Button>
+                <Button className="text-primary bg-white hover:bg-secondary w-full mt-4 md:mt-6">{t("home.contactBtn")}</Button>
               </Card>
-              <Card className="bg-mesh text-white border-primary p-4 md:p-6 shadow-md">
-                <div className=" flex flex-row items-center gap-4">
-                  <div className="rounded-full bg-muted/20 p-3">
+              <Card className="bg-mesh text-white border-primary p-2 sm:p-4 md:p-6 shadow-md">
+                <div className=" flex flex-row items-center gap-2 md:gap-4">
+                  <div className="rounded-full bg-muted/20 p-1.5 md:p-3 text-sm md:text-lg">
                     <Linkedin />
                   </div>
                   <div className="flex flex-col">
-                    <h6 className="uppercase text-xl text-white font-bold">{t("contacts.linkedinTitle")}</h6>
-                    <Link href={t("contacts.linkedinUrl")} className="underline">{t("contacts.linkedinLink")}</Link>
+                    <h6 className="uppercase md:text-xl text-white font-bold">{t("contacts.linkedinTitle")}</h6>
+                    <Link href={t("contacts.linkedinUrl")} className="underline text-sm md:text-base">Menu Master DG</Link>
                   </div>
                 </div>
-                <Button className="text-primary bg-white hover:bg-secondary w-full mt-6">{t("home.contactBtn")}</Button>
+                <Button className="text-primary bg-white hover:bg-secondary w-full mt-4 md:mt-6">{t("home.contactBtn")}</Button>
               </Card>
-              <Card className="bg-mesh text-white border-primary p-4 md:p-6 shadow-md">
-                <div className=" flex flex-row items-center gap-4">
-                  <div className="rounded-full bg-muted/20 p-3">
+              <Card className="bg-mesh text-white border-primary p-2 sm:p-4 md:p-6 shadow-md">
+                <div className=" flex flex-row items-center gap-2 md:gap-4">
+                  <div className="rounded-full bg-muted/20 p-1.5 md:p-3 text-sm md:text-lg">
                     <Facebook />
                   </div>
                   <div className="flex flex-col">
-                    <h6 className="uppercase text-xl text-white font-bold">{t("contacts.facebookTitle")}</h6>
-                    <Link href={t("contacts.facebookUrl")} className="underline">Menu Master DG</Link>
+                    <h6 className="uppercase md:text-xl text-white font-bold">{t("contacts.facebookTitle")}</h6>
+                    <Link href={t("contacts.facebookUrl")} className="underline text-sm md:text-base">Menu Master DG</Link>
                   </div>
                 </div>
-                <Button className="text-primary bg-white hover:bg-secondary w-full mt-6">{t("home.contactBtn")}</Button>
+                <Button className="text-primary bg-white hover:bg-secondary w-full mt-4 md:mt-6">{t("home.contactBtn")}</Button>
               </Card>
             </div>
           </div>

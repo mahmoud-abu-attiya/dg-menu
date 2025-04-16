@@ -21,10 +21,9 @@ export default {
   				'2xl': '6rem'
   			},
   			screens: {
-  				sm: '480px',
-  				md: '768px',
-  				lg: '976px',
-  				xl: '1440px'
+  				sm: '768px',
+  				md: '1024px',
+  				lg: '1440px'
   			}
   		},
   		colors: {
