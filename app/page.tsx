@@ -13,6 +13,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import Tts from "@/components/tts"
 
 
 export default function Home() {
@@ -407,7 +408,7 @@ export default function Home() {
                 {t("home.contactSubTitle")}
               </p>
             </div>
-            <div className="grid gap-4 grid-cols-2 lg:col-span-3">
+            <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:col-span-3">
               <Card className="bg-mesh text-white border-primary p-2 sm:p-4 md:p-6 shadow-md">
                 <div className=" flex flex-row items-center gap-2 md:gap-4">
                   <div className="rounded-full bg-muted/20 p-1.5 md:p-3 text-sm md:text-lg">
@@ -472,6 +473,7 @@ export default function Home() {
           </div>
         </section>
       </main>
+      <Tts />
       <footer className="w-full border-t py-6">
         <div className="container flex flex-col items-center justify-between gap-4 md:flex-row">
           <div className="flex items-center gap-2">
