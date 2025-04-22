@@ -4,7 +4,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { ArrowRight, CheckCircle2, QrCode, Star, Utensils, Palette, Instagram, Linkedin, Facebook, MapPin, MessageSquareText } from "lucide-react"
+import { ArrowRight, CheckCircle2, QrCode, Star, Utensils, Palette, Instagram, Linkedin, Facebook, MessageSquareText } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
 import { LanguageSelector } from "@/components/language-selector"
 import {
@@ -13,8 +13,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
-import Tts from "@/components/tts"
-
 
 export default function Home() {
   const { t, tArray, direction } = useLanguage();
@@ -41,13 +39,13 @@ export default function Home() {
           <div className="flex items-center gap-4">
             <LanguageSelector />
             <Link href="/login">
-              <Button variant="ghost" size="sm">
+              <Button size="sm">
                 {t("common.login")}
               </Button>
             </Link>
-            <Link href="/register">
+            {/* <Link href="/register">
               <Button size="sm">{t("common.register")}</Button>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </header>
@@ -436,18 +434,6 @@ export default function Home() {
               <Card className="bg-mesh text-white border-primary p-2 sm:p-4 md:p-6 shadow-md">
                 <div className=" flex flex-row items-center gap-2 md:gap-4">
                   <div className="rounded-full bg-muted/20 p-1.5 md:p-3 text-sm md:text-lg">
-                    <MapPin />
-                  </div>
-                  <div className="flex flex-col">
-                    <h6 className="uppercase md:text-xl text-white font-bold">{t("contacts.locationTitle")}</h6>
-                    <Link href={t("contacts.locationUrl")} className="underline text-sm md:text-base">Desoq, kafr El-sheakh</Link>
-                  </div>
-                </div>
-                <Button className="text-primary bg-white hover:bg-secondary w-full mt-4 md:mt-6">{t("home.contactBtn")}</Button>
-              </Card>
-              <Card className="bg-mesh text-white border-primary p-2 sm:p-4 md:p-6 shadow-md">
-                <div className=" flex flex-row items-center gap-2 md:gap-4">
-                  <div className="rounded-full bg-muted/20 p-1.5 md:p-3 text-sm md:text-lg">
                     <Linkedin />
                   </div>
                   <div className="flex flex-col">
@@ -473,7 +459,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <Tts />
       <footer className="w-full border-t py-6">
         <div className="container flex flex-col items-center justify-between gap-4 md:flex-row">
           <div className="flex items-center gap-2">

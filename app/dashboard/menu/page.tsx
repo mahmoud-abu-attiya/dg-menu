@@ -94,7 +94,7 @@ export default function MenuPage() {
   ]
 
   return (
-    <div className="flex flex-col gap-6 p-6">
+    <div className="flex flex-col gap-4 p-4 md:gap-6 md:p-6">
       <div className="flex md:items-center md:justify-between flex-col md:flex-row gap-4">
         <div className="flex gap-4 items-center">
           <SidebarTrigger className="-ml-1" />
