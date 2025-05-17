@@ -3,9 +3,9 @@
 
 import type React from "react"
 import { createContext, useContext, useState, useEffect } from "react"
-import { useRouter } from "next/navigation"
+// import { useRouter } from "next/navigation"
 import { setCookie, getCookie } from "cookies-next"
-// import { Tajawal, Nunito } from "next/font/google";
+import { Tajawal, Nunito } from "next/font/google";
 
 type Language = "en" | "ar"
 type Direction = "ltr" | "rtl"
@@ -20,8 +20,8 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
 
-// const nunito = Nunito({ subsets: ["latin"] });
-// const tajawal = Tajawal({ weight: "500", subsets: ["latin"] });
+const nunito = Nunito({ subsets: ["latin"] });
+const tajawal = Tajawal({ weight: "500", subsets: ["latin"] });
 
 export function useLanguage() {
   const context = useContext(LanguageContext)
@@ -40,7 +40,7 @@ interface LanguageProviderProps {
 }
 
 export function LanguageProvider({ children, translations }: LanguageProviderProps) {
-  const router = useRouter();
+  // const router = useRouter();
   const [language, setLanguageState] = useState<Language>("en");
   const [direction, setDirection] = useState<Direction>("ltr");
 
@@ -51,7 +51,7 @@ export function LanguageProvider({ children, translations }: LanguageProviderPro
       setDirection(savedLanguage === "ar" ? "rtl" : "ltr");
       document.documentElement.lang = savedLanguage;
       document.documentElement.dir = savedLanguage === "ar" ? "rtl" : "ltr";
-      // document.body.className = savedLanguage === "ar" ? tajawal.className : nunito.className;
+      document.body.className = savedLanguage === "ar" ? tajawal.className : nunito.className;
     }
   }, []);
 
@@ -61,16 +61,16 @@ export function LanguageProvider({ children, translations }: LanguageProviderPro
     setCookie("language", lang, { maxAge: 60 * 60 * 24 * 30 }); // 30 days
     document.documentElement.lang = lang;
     document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
-    // document.body.className = lang === "ar" ? tajawal.className : nunito.className;
+    document.body.className = lang === "ar" ? tajawal.className : nunito.className;
 
     // Update the URL with the new language parameter
-    const currentPath = window.location.pathname; // Get the current path without query params
-    const searchParams = new URLSearchParams(window.location.search)
-    searchParams.set("lang", lang) // Set the 'lang' parameter
-    router.push(`${currentPath}?${searchParams.toString()}`) // Update the URL
+    // const currentPath = window.location.pathname; // Get the current path without query params
+    // const searchParams = new URLSearchParams(window.location.search)
+    // searchParams.set("lang", lang) // Set the 'lang' parameter
+    // router.push(`${currentPath}?${searchParams.toString()}`) // Update the URL
 
     // Refresh the page to apply RTL/LTR changes
-    router.refresh();
+    // router.refresh();
   };
 
   const t = (key: string) => {

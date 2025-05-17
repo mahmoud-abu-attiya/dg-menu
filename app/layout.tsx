@@ -4,6 +4,14 @@ import "./globals.css";
 import { LanguageProvider } from "@/contexts/language-context";
 import enTranslations from "@/locales/en.json";
 import arTranslations from "@/locales/ar.json";
+import { Nunito, Tajawal } from "next/font/google";
+
+
+const nunito = Nunito({ subsets: ["latin"] });
+const tajawal = Tajawal({
+  subsets: ["arabic"],
+  weight: ["400", "700"],
+});
 
 
 export const metadata: Metadata = {
@@ -13,22 +21,21 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  params,
+  params
 }: Readonly<{
   children: React.ReactNode;
-  params: { lang?: string };
+  params: {
+    lang: string;
+  };
 }>) {
-  const lang = params.lang || "ar";
   const translations = {
     en: enTranslations,
     ar: arTranslations,
   };
-  const isArabic = lang === "ar";
-  const direction = isArabic ? "rtl" : "ltr";
 
   return (
-    <html lang={lang} dir={direction}>
-      <body>
+    <html lang="en" dir="ltr">
+      <body className={params.lang === "ar" ? tajawal.className : nunito.className}>
         <LanguageProvider translations={translations}>{children}</LanguageProvider>
       </body>
     </html>
