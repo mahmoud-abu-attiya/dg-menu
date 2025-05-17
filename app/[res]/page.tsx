@@ -8,7 +8,7 @@ import { useTextToSpeech } from "@/hooks/useTextToSpeech";
 const Modern = () => {
   const { start } = useTextToSpeech();
   const [activeCategory, setActiveCategory] = useState<number>(0)
-  const mainColor = "#000000" // red
+  const mainColor = "orange" // red
   const branch_data = {
     name: "Branch Name",
     address: "Branch Address",

@@ -62,7 +62,7 @@ export default function Home() {
                   <p className="max-w-[600px] text-muted-foreground md:text-xl">{t("home.heroDescription")}</p>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                  <Link href="/register">
+                  <Link href="/dashboard">
                     <Button size="lg" className="gap-1.5">
                       {t("common.getStarted")}
                       <ArrowRight className="h-4 w-4 rtl-rotate-180" />
